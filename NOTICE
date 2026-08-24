@@ -1,0 +1,11 @@
+ScanBot3000 Control
+
+Copyright 2026 the ScanBot3000 copyright holders and contributors.
+
+Licensed under the Apache License 2.0 with the Commons Clause License Condition v1.0. See LICENSE for the complete project terms.
+
+Third-party software:
+- uPlot is vendored under `app/static/vendor/uplot/` and is MIT licensed. Its license notice is retained at `app/static/vendor/uplot/LICENSE`.
+- Python packages installed from `requirements.txt` remain subject to their respective upstream licenses.
+
+The ScanBot3000 project license does not replace or relicense third-party components.

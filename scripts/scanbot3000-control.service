@@ -1,0 +1,21 @@
+[Unit]
+Description=ScanBot3000 Control (FastAPI + Uvicorn)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Template values: edit these for your deployment before installation.
+WorkingDirectory=/opt/scanbot3000-control
+EnvironmentFile=-/opt/scanbot3000-control/.env
+ExecStart=/opt/scanbot3000-control/scripts/start-teensy-console.sh
+Restart=on-failure
+RestartSec=5
+
+# Replace with the local account that owns the clone and has serial access.
+User=scanbot
+Group=scanbot
+SupplementaryGroups=dialout tty
+
+[Install]
+WantedBy=multi-user.target

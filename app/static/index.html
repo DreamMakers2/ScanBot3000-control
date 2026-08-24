@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ScanBot3000 Control</title>
+    <link rel="stylesheet" href="/static/vendor/uplot/uPlot.min.css" />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ScanBot3000 Control</h1>
+      <div class="header-actions">
+        <button id="global-stop" class="danger" type="button" title="STOP all axes">EMERGENCY STOP</button>
+        <span id="connection-status" class="status-dot offline">Offline</span>
+      </div>
+    </header>
+    <main>
+      <section class="panel-grid" id="axis-grid">
+        <!-- Axis panels mount here -->
+      </section>
+
+      <section class="settings" id="system-settings">
+        <div class="section-header">
+          <h2>System Settings</h2>
+          <div class="section-tools">
+            <button id="toggle-system-settings" type="button" aria-expanded="false">Show</button>
+            <span id="settings-message" class="message"></span>
+          </div>
+        </div>
+        <div id="system-settings-body" class="collapsible" hidden>
+          <form id="settings-form">
+            <div class="form-row">
+              <label for="serial_device">Serial Device</label>
+              <input id="serial_device" name="serial_device" type="text" />
+            </div>
+            <div class="form-row">
+              <label for="baud_rate">Baud Rate</label>
+              <input id="baud_rate" name="baud_rate" type="number" min="9600" step="1" />
+            </div>
+            <div class="form-row">
+              <label for="data_bits">Data Bits</label>
+              <select id="data_bits" name="data_bits">
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="parity">Parity</label>
+              <select id="parity" name="parity">
+                <option value="N">None</option>
+                <option value="E">Even</option>
+                <option value="O">Odd</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="stop_bits">Stop Bits</label>
+              <select id="stop_bits" name="stop_bits">
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="newline">Transmit Newline</label>
+              <select id="newline" name="newline">
+                <option value="\n">LF</option>
+                <option value="\r\n">CRLF</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="console_history">Console History (lines)</label>
+              <input id="console_history" name="console_history" type="number" min="50" max="2000" />
+            </div>
+            <div class="form-row">
+              <label for="metrics_history">Metrics History (seconds)</label>
+              <input id="metrics_history" name="metrics_history" type="number" min="60" max="3600" />
+            </div>
+            <div class="form-actions">
+              <button type="submit">Save</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="/static/vendor/uplot/uPlot.iife.min.js"></script>
+    <script src="/static/app.js?v=20251128-force-scroll-revert"></script>
+  </body>
+</html>

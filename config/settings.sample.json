@@ -1,0 +1,18 @@
+{
+  "serial_device": "/dev/serial0",
+  "baud_rate": 1000000,
+  "data_bits": 8,
+  "parity": "N",
+  "stop_bits": 1,
+  "newline": "\n",
+  "console_history": 500,
+  "metrics_history": 300,
+  "axis_map": {
+    "r": "r",
+    "z": "z",
+    "x1": "x1",
+    "x2": "x2",
+    "x": "x1",
+    "p": "x2"
+  }
+}
