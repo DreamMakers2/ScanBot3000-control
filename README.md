@@ -9,7 +9,7 @@ Local Raspberry Pi control bridge and real-time web console for the ScanBot3000 
 
 ScanBot3000 Control runs on the host computer between the browser tools and the Teensy 4.1 motion supervisor. It reads the Teensy console over UART, exposes REST/WebSocket endpoints, serves a lightweight multi-axis dashboard, and forwards operator commands back to the firmware.
 
-> **Project home:** [DreamMakers2/Scanbot3000](https://github.com/DreamMakers2/Scanbot3000)  
+> **Project home:** [Scanbot3000](https://github.com/DreamMakers2/Scanbot3000)  
 > **Firmware:** [ScanBot3000-firmware](https://github.com/DreamMakers2/ScanBot3000-firmware)  
 > **Kinematics UI:** [ScanBot3000-kinematics](https://github.com/DreamMakers2/ScanBot3000-kinematics)
 
