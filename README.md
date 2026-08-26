@@ -15,12 +15,7 @@ ScanBot3000 Control runs on the host computer between the browser tools and the 
 
 ## 🧩 Architecture
 
-```mermaid
-flowchart LR
-    B[Browser / Kinematics] <-->|HTTP + WebSocket| P[ScanBot3000 Control · FastAPI]
-    P <-->|/dev/serial0 · 1 Mbit/s| T[Teensy 4.1 firmware]
-    T --> A[Axes R · Z · X1 · X2]
-```
+![ScanBot3000 control](docs/assets/scanbot3000-control.png)
 
 The service keeps bounded console/metrics buffers, parses axis telemetry, provides per-axis WebSocket streams, and exposes helpers for homing, stop, coordinated moves, driver status/settings, velocity/acceleration caps, position, and reboot.
 
